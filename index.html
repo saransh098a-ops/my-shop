@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopElite - Premium Products</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Loader -->
+    <div id="loader" class="loader">
+        <div class="loader-spinner"></div>
+        <p>Loading ShopElite...</p>
+    </div>
+
+    <!-- Announcement Bar -->
+    <div class="announcement-bar">
+        <div class="announcement-scroll">
+            <span>🔥 FREE SHIPPING on orders above ₹499 | Use code FIRST10 for 10% off | 🔥 New Arrivals Every Week</span>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-left">
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <a href="#" class="logo">
+                    <span class="logo-icon">◆</span>
+                    <span class="logo-text">Shop<span class="logo-highlight">Elite</span></span>
+                </a>
+            </div>
+            
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#categories">Categories</a></li>
+                <li><a href="#deals">Deals</a></li>
+                <li><a href="#reviews">Reviews</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+            <div class="nav-right">
+                <button class="nav-icon-btn" id="searchToggle">
+                    <i class="fas fa-search"></i>
+                </button>
+                <button class="nav-icon-btn" id="wishlistToggle">
+                    <i class="fas fa-heart"></i>
+                    <span class="badge" id="wishlistCount">0</span>
+                </button>
+                <button class="nav-icon-btn" id="cartToggle">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="badge" id="cartCount">0</span>
+                </button>
+                <button class="nav-icon-btn" id="userToggle">
+                    <i class="fas fa-user"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Search Bar -->
+        <div class="search-overlay" id="searchOverlay">
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Search products..." autocomplete="off">
+                <button id="searchBtn"><i class="fas fa-search"></i></button>
+                <button class="search-close" id="searchClose"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="search-results" id="searchResults"></div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-header">
+            <span class="logo-text">Shop<span class="logo-highlight">Elite</span></span>
+            <button class="mobile-menu-close" id="mobileMenuClose"><i class="fas fa-times"></i></button>
+        </div>
+        <ul class="mobile-nav-links">
+            <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="#products"><i class="fas fa-box"></i> Products</a></li>
+            <li><a href="#categories"><i class="fas fa-th-large"></i> Categories</a></li>
+            <li><a href="#deals"><i class="fas fa-tags"></i> Deals</a></li>
+            <li><a href="#reviews"><i class="fas fa-star"></i> Reviews</a></li>
+            <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+        </ul>
+        <div class="mobile-menu-footer">
+            <a href="#" id="mobileLogin"><i class="fas fa-user"></i> Login / Register</a>
+            <a href="#"><i class="fas fa-headset"></i> Customer Support</a>
+        </div>
+    </div>
+    <div class="mobile-overlay" id="mobileOverlay"></div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-slider">
+            <div class="hero-slide active" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                <div class="hero-content">
+                    <span class="hero-badge">New Collection 2024</span>
+                    <h1 class="hero-title">Discover Premium<br><span>Quality Products</span></h1>
+                    <p class="hero-text">Shop the latest trends with unbeatable prices and premium quality guaranteed.</p>
+                    <div class="hero-buttons">
+                        <a href="#products" class="btn btn-primary btn-lg">
+                            <i class="fas fa-shopping-bag"></i> Shop Now
+                        </a>
+                        <a href="#deals" class="btn btn-outline btn-lg">
+                            <i class="fas fa-fire"></i> View Deals
+                        </a>
+                    </div>
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <strong>10K+</strong>
+                            <span>Happy Customers</span>
+                        </div>
+                        <div class="stat">
+                            <strong>500+</strong>
+                            <span>Products</span>
+                        </div>
+                        <div class="stat">
+                            <strong>4.9★</strong>
+                            <span>Rating</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=600" alt="Shopping">
+                </div>
+            </div>
+            <div class="hero-slide" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                <div class="hero-content">
+                    <span class="hero-badge">Limited Time Offer</span>
+                    <h1 class="hero-title">Up to 50% Off<br><span>Everything</span></h1>
+                    <p class="hero-text">Don't miss out on our biggest sale of the year. Limited stock available!</p>
+                    <div class="hero-buttons">
+                        <a href="#deals" class="btn btn-primary btn-lg">
+                            <i class="fas fa-tags"></i> Grab Deals
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?w=600" alt="Sale">
+                </div>
+            </div>
+            <div class="hero-slide" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                <div class="hero-content">
+                    <span class="hero-badge">Free Delivery</span>
+                    <h1 class="hero-title">Fast & Free<br><span>Shipping</span></h1>
+                    <p class="hero-text">Free shipping on all orders above ₹499. Delivered within 3-5 business days.</p>
+                    <div class="hero-buttons">
+                        <a href="#products" class="btn btn-primary btn-lg">
+                            <i class="fas fa-truck"></i> Start Shopping
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600" alt="Delivery">
+                </div>
+            </div>
+        </div>
+        <div class="hero-dots">
+            <span class="dot active" data-slide="0"></span>
+            <span class="dot" data-slide="1"></span>
+            <span class="dot" data-slide="2"></span>
+        </div>
+        <button class="hero-arrow hero-prev"><i class="fas fa-chevron-left"></i></button>
+        <button class="hero-arrow hero-next"><i class="fas fa-chevron-right"></i></button>
+    </section>
+
+    <!-- Features Bar -->
+    <section class="features-bar">
+        <div class="container">
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-icon"><i class="fas fa-truck"></i></div>
+                    <div class="feature-text">
+                        <strong>Free Shipping</strong>
+                        <span>On orders ₹499+</span>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon"><i class="fas fa-shield-alt"></i></div>
+                    <div class="feature-text">
+                        <strong>Secure Payment</strong>
+                        <span>100% Protected</span>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon"><i class="fas fa-undo"></i></div>
+                    <div class="feature-text">
+                        <strong>Easy Returns</strong>
+                        <span>7 Days Return</span>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon"><i class="fas fa-headset"></i></div>
+                    <div class="feature-text">
+                        <strong>24/7 Support</strong>
+                        <span>Dedicated Help</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories-section" id="categories">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Browse</span>
+                <h2 class="section-title">Shop by Category</h2>
+                <p class="section-subtitle">Find exactly what you're looking for</p>
+            </div>
+            <div class="categories-grid" id="categoriesGrid"></div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products-section" id="products">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Our Products</span>
+                <h2 class="section-title">Featured Products</h2>
+                <p class="section-subtitle">Handpicked products just for you</p>
+            </div>
+            <div class="products-toolbar">
+                <div class="filter-tabs">
+                    <button class="filter-tab active" data-filter="all">All</button>
+                    <button class="filter-tab" data-filter="electronics">Electronics</button>
+                    <button class="filter-tab" data-filter="fashion">Fashion</button>
+                    <button class="filter-tab" data-filter="home">Home</button>
+                    <button class="filter-tab" data-filter="beauty">Beauty</button>
+                    <button class="filter-tab" data-filter="sports">Sports</button>
+                </div>
+                <div class="sort-dropdown">
+                    <select id="sortSelect">
+                        <option value="featured">Featured</option>
+                        <option value="price-low">Price: Low to High</option>
+                        <option value="price-high">Price: High to Low</option>
+                        <option value="rating">Best Rating</option>
+                        <option value="newest">Newest</option>
+                    </select>
+                </div>
+            </div>
+            <div class="products-grid" id="productsGrid"></div>
+            <div class="load-more-container">
+                <button class="btn btn-outline" id="loadMoreBtn">
+                    <i class="fas fa-plus"></i> Load More Products
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Deal of the Day -->
+    <section class="deals-section" id="deals">
+        <div class="container">
+            <div class="deal-banner">
+                <div class="deal-content">
+                    <span class="deal-badge">⚡ Deal of the Day</span>
+                    <h2 class="deal-title">Super Saver Deal</h2>
+                    <p class="deal-text">Get up to 50% off on selected premium products. Hurry, offer ends soon!</p>
+                    <div class="countdown" id="countdown">
+                        <div class="countdown-item">
+                            <span class="countdown-value" id="hours">08</span>
+                            <span class="countdown-label">Hours</span>
+                        </div>
+                        <div class="countdown-item">
+                            <span class="countdown-value" id="minutes">45</span>
+                            <span class="countdown-label">Minutes</span>
+                        </div>
+                        <div class="countdown-item">
+                            <span class="countdown-value" id="seconds">30</span>
+                            <span class="countdown-label">Seconds</span>
+                        </div>
+                    </div>
+                    <a href="#products" class="btn btn-primary btn-lg">
+                        <i class="fas fa-shopping-cart"></i> Shop Deals Now
+                    </a>
+                </div>
+                <div class="deal-image">
+                    <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=500" alt="Deal Product">
+                    <div class="deal-discount">-50%</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trending Products -->
+    <section class="trending-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">🔥 Trending</span>
+                <h2 class="section-title">Best Sellers</h2>
+                <p class="section-subtitle">Most popular products this week</p>
+            </div>
+            <div class="trending-scroll" id="trendingScroll"></div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter-section">
+        <div class="container">
+            <div class="newsletter-content">
+                <div class="newsletter-text">
+                    <h2>Get 10% Off Your First Order</h2>
+                    <p>Subscribe to our newsletter and never miss out on exclusive deals and new arrivals.</p>
+                </div>
+                <form class="newsletter-form" id="newsletterForm">
+                    <input type="email" placeholder="Enter your email address" required>
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section class="reviews-section" id="reviews">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Testimonials</span>
+                <h2 class="section-title">What Our Customers Say</h2>
+                <p class="section-subtitle">Real reviews from real customers</p>
+            </div>
+            <div class="reviews-grid" id="reviewsGrid"></div>
+        </div>
+    </section>
+
+    <!-- Instagram Feed -->
+    <section class="instagram-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">📸 Instagram</span>
+                <h2 class="section-title">Follow Us @ShopElite</h2>
+            </div>
+            <div class="instagram-grid">
+                <div class="insta-item"><img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=300" alt=""><div class="insta-overlay"><i class="fab fa-instagram"></i></div></div>
+                <div class="insta-item"><img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=300" alt=""><div class="insta-overlay"><i class="fab fa-instagram"></i></div></div>
+                <div class="insta-item"><img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=300" alt=""><div class="insta-overlay"><i class="fab fa-instagram"></i></div></div>
+                <div class="insta-item"><img src="https://images.unsplash.com/photo-1560343090-f0409e92791a?w=300" alt=""><div class="insta-overlay"><i class="fab fa-instagram"></i></div></div>
+                <div class="insta-item"><img src="https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=300" alt=""><div class="insta-overlay"><i class="fab fa-instagram"></i></div></div>
+                <div class="insta-item"><img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?w=300" alt=""><div class="insta-overlay"><i class="fab fa-instagram"></i></div></div>
+            </div>
+        </div>
+  </section>
+      <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Get in Touch</span>
+                <h2 class="section-title">Contact Us</h2>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div>
+                            <strong>Address</strong>
+                            <p>123 Business Street, Mumbai, India 400001</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fas fa-phone"></i></div>
+                        <div>
+                            <strong>Phone</strong>
+                            <p>+91 98765 43210</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                        <div>
+                            <strong>Email</strong>
+                            <p>support@shopelite.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fas fa-clock"></i></div>
+                        <div>
+                            <strong>Working Hours</strong>
+                            <p>Mon - Sat: 9AM - 9PM</p>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="text" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Your Email" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" placeholder="Subject" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Your Message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-lg">
+                        <i class="fas fa-paper-plane"></i> Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <span class="logo-icon">◆</span>
+                        <span class="logo-text">Shop<span class="logo-highlight">Elite</span></span>
+                    </div>
+                    <p>Your one-stop destination for premium quality products at unbeatable prices.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#products">Products</a></li>
+                        <li><a href="#deals">Deals</a></li>
+                        <li><a href="#reviews">Reviews</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Customer Service</h4>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Shipping Policy</a></li>
+                        <li><a href="#">Return Policy</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>My Account</h4>
+                    <ul>
+                        <li><a href="#">My Orders</a></li>
+                        <li><a href="#">Wishlist</a></li>
+                        <li><a href="#">Track Order</a></li>
+                        <li><a href="#">Help Center</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 ShopElite. All rights reserved. Made with ❤️</p>
+                <div class="payment-icons">
+                    <img src="https://img.icons8.com/color/48/visa.png" alt="Visa" width="40">
+                    <img src="https://img.icons8.com/color/48/mastercard.png" alt="Mastercard" width="40">
+                    <img src="https://img.icons8.com/color/48/rupay.png" alt="RuPay" width="40">
+                    <img src="https://img.icons8.com/color/48/bhim-upi.png" alt="UPI" width="40">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3><i class="fas fa-shopping-bag"></i> Your Cart (<span id="cartItemCount">0</span>)</h3>
+            <button class="cart-close" id="cartClose"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <div class="empty-cart">
+                <i class="fas fa-shopping-bag"></i>
+                <p>Your cart is empty</p>
+                <a href="#products" class="btn btn-primary" id="continueShopping">Continue Shopping</a>
+            </div>
+        </div>
+        <div class="cart-footer" id="cartFooter" style="display:none;">
+            <div class="cart-summary">
+                <div class="summary-row">
+                    <span>Subtotal</span>
+                    <span id="cartSubtotal">₹0</span>
+                </div>
+                <div class="summary-row">
+                    <span>Shipping</span>
+                    <span id="cartShipping">₹0</span>
+                </div>
+                <div class="summary-row">
+                    <span>Discount</span>
+                    <span id="cartDiscount" class="discount-text">-₹0</span>
+                </div>
+                <div class="coupon-section">
+                    <input type="text" id="couponInput" placeholder="Enter coupon code">
+                    <button class="btn btn-sm" id="applyCoupon">Apply</button>
+                </div>
+                <div class="summary-row total">
+                    <span>Total</span>
+                    <span id="cartTotal">₹0</span>
+                </div>
+            </div>
+            <button class="btn btn-primary btn-lg btn-block" id="checkoutBtn">
+                <i class="fas fa-lock"></i> Proceed to Checkout
+            </button>
+        </div>
+    </div>
+    <div class="cart-overlay" id="cartOverlay"></div>
+
+    <!-- Quick View Modal -->
+    <div class="modal" id="quickViewModal">
+        <div class="modal-content quick-view-content">
+            <button class="modal-close" id="quickViewClose"><i class="fas fa-times"></i></button>
+            <div class="quick-view-grid">
+                <div class="quick-view-images">
+                    <img id="quickViewImage" src="" alt="">
+                </div>
+                <div class="quick-view-details">
+                    <span class="product-category" id="qvCategory"></span>
+                    <h2 id="qvName"></h2>
+                    <div class="product-rating" id="qvRating"></div>
+                    <div class="product-price">
+                        <span class="current-price" id="qvPrice"></span>
+                        <span class="original-price" id="qvOriginal"></span>
+                        <span class="discount-badge" id="qvDiscount"></span>
+                    </div>
+                    <p id="qvDescription"></p>
+                    <div class="size-selector" id="qvSizes"></div>
+                    <div class="color-selector" id="qvColors"></div>
+                    <div class="quantity-selector">
+                        <button class="qty-btn" id="qvMinus">-</button>
+                        <input type="number" value="1" min="1" id="qvQuantity">
+                        <button class="qty-btn" id="qvPlus">+</button>
+                    </div>
+                    <div class="quick-view-actions">
+                        <button class="btn btn-primary btn-lg" id="qvAddToCart">
+                            <i class="fas fa-shopping-cart"></i> Add to Cart
+                        </button>
+                        <button class="btn btn-outline" id="qvBuyNow">
+                            <i class="fas fa-bolt"></i> Buy Now
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Checkout Modal -->
+    <div class="modal" id="checkoutModal">
+        <div class="modal-content checkout-content">
+            <button class="modal-close" id="checkoutClose"><i class="fas fa-times"></i></button>
+            <div class="checkout-steps">
+                <div class="step active" data-step="1">
+                    <span class="step-num">1</span>
+                    <span class="step-text">Shipping</span>
+                </div>
+                <div class="step" data-step="2">
+                    <span class="step-num">2</span>
+                    <span class="step-text">Review</span>
+                </div>
+                <div class="step" data-step="3">
+                    <span class="step-num">3</span>
+                    <span class="step-text">Payment</span>
+                </div>
+            </div>
+            <div class="checkout-step-content" id="step1" style="display:block;">
+                <h3>Shipping Information</h3>
+                <form id="shippingForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Full Name *</label>
+                            <input type="text" id="shipName" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Phone *</label>
+                            <input type="tel" id="shipPhone" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Email *</label>
+                        <input type="email" id="shipEmail" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Address *</label>
+                        <textarea id="shipAddress" rows="3" required></textarea>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>City *</label>
+                            <input type="text" id="shipCity" required>
+                        </div>
+                        <div class="form-group">
+                            <label>State *</label>
+                            <input type="text" id="shipState" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>PIN Code *</label>
+                            <input type="text" id="shipPincode" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Landmark</label>
+                            <input type="text" id="shipLandmark">
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-lg btn-block">
+                        Continue to Review <i class="fas fa-arrow-right"></i>
+                    </button>
+                </form>
+            </div>
+            <div class="checkout-step-content" id="step2" style="display:none;">
+                <h3>Order Review</h3>
+                <div class="review-items" id="reviewItems"></div>
+                <div class="review-address" id="reviewAddress"></div>
+                <div class="review-summary" id="reviewSummary"></div>
+                <div class="review-actions">
+                    <button class="btn btn-outline" id="backToShipping">
+                        <i class="fas fa-arrow-left"></i> Back
+                    </button>
+                    <button class="btn btn-primary btn-lg" id="proceedToPayment">
+                        Proceed to Pay <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="checkout-step-content" id="step3" style="display:none;">
+                <h3>Payment</h3>
+                <div class="payment-processing">
+                    <div class="loader-spinner"></div>
+                    <p>Initializing Razorpay...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Auth Modal -->
+    <div class="modal" id="authModal">
+        <div class="modal-content auth-content">
+            <button class="modal-close" id="authClose"><i class="fas fa-times"></i></button>
+            <div class="auth-tabs">
+                <button class="auth-tab active" data-tab="login">Login</button>
+                <button class="auth-tab" data-tab="register">Register</button>
+            </div>
+            <div class="auth-form-container">
+                <form class="auth-form" id="loginForm" style="display:block;">
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="email" id="loginEmail" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Password</label>
+                        <input type="password" id="loginPassword" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Login</button>
+                    <p class="auth-link">Forgot password? <a href="#">Reset here</a></p>
+                </form>
+                <form class="auth-form" id="registerForm" style="display:none;">
+                    <div class="form-group">
+                        <label>Full Name</label>
+                        <input type="text" id="regName" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="email" id="regEmail" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Phone</label>
+                        <input type="tel" id="regPhone" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Password</label>
+                        <input type="password" id="regPassword" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Register</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Order Success Modal -->
+    <div class="modal" id="successModal">
+        <div class="modal-content success-content">
+            <div class="success-animation">
+                <div class="success-checkmark">
+                    <i class="fas fa-check"></i>
+                </div>
+            </div>
+            <h2>Order Placed Successfully! 🎉</h2>
+            <p>Your order has been confirmed. You will receive an email with tracking details.</p>
+            <div class="order-id-display">
+                <span>Order ID:</span>
+                <strong id="orderId"></strong>
+            </div>
+            <button class="btn btn-primary btn-lg" id="successClose">Continue Shopping</button>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <!-- WhatsApp Float -->
+    <a href="https://wa.me/919876543210" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    <script src="js/app.js"></script>
+</body>
+  </html>
